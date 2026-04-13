@@ -13,8 +13,16 @@ public class Main {
         lista.inserir(new Produto("Arroz", 20.00));
 
         // Antes da exibição mostra um texto
-        System.out.println("Lista de Produtos: ");
+        System.out.println("\n Lista de Produtos: ");
         lista.exibir();
+
+        System.out.println("\n Pesquisa");
+        Produto guardaRes = lista.pesquisar(2); // Pega o que retorna e guarda na variavel guardaRes
+        if( guardaRes != null){
+            System.out.println("O produto encontrado foi: " + guardaRes); // Caso ache o ‘ID’, ele so mostra o produto
+        } else{
+            System.out.println("Produto não encontrado.");
+        }
 
     }
 }

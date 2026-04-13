@@ -15,7 +15,7 @@ public class Lista {
         if(inicio == null){
             inicio = new No(produto, null);
             aux = inicio;
-        } else { // 2° Caso: Se já existir um inicio, então o objeto será o proximo da lista
+        } else { // 2° Caso: Se já existir um início, então o objeto será o proximo da lista
             atual = new No(produto, null); // Cria o Produto e recebe que é o atual
             aux.setProx(atual); // Sett o antigo aux como o atual (fala que o antigo aponta pro novo)
             aux = atual; // E seta o auxiliar para mirar no atual, indo do primeiro pro 2° se for o caso
@@ -36,6 +36,18 @@ public class Lista {
             // E fim do laço, ele avança até o proximo ser vazio, que quer dizer que não existem mais nós, e para.
         }
 
+    }
+
+    // Metodo para Pesquisar (Recebe um ID, e retorna o Prod depois de achar o ID)
+    public Produto pesquisar(int id){
+        No andaLista = inicio;
+        while(andaLista != null){
+            if(andaLista.getProduto().getID() == id){
+            return andaLista.getProduto();
+            }
+            andaLista = andaLista.getProx();
+        }
+        return null;
     }
 
 
