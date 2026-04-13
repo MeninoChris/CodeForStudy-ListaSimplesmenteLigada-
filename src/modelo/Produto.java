@@ -39,10 +39,10 @@ public class Produto {
     // Fazer parecer bonito quando imprimir
     @Override
     public String toString() {
-        return "Produto { " +
-                "nome = '" + nome + '\'' +
-                ", preço = " + preco +
-                ", ID = " + ID +
+        return "Produto n°" + ID + " { \n " +
+                "Nome = '" + nome + '\'' +
+                ", Preço = " + preco +
+                ", ID = " + ID + " " +
                 '}';
     }
     // EXPLICAÇÃO --| toString |--

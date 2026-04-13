@@ -8,7 +8,6 @@ public class Lista {
     private No aux;
     private No atual;
 
-    Produto p = new Produto();
 
     // Metodo para Inserir
     public void inserir(Produto produto){
@@ -39,5 +38,5 @@ public class Lista {
 
     }
 
-    
+
 }
