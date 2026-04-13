@@ -6,7 +6,7 @@ public class No {
     private Produto produto;
     private No prox;
 
-    private No(Produto produto, No prox) {
+    public No(Produto produto, No prox) {
         this.produto = produto;
         this.prox = prox;
     }
