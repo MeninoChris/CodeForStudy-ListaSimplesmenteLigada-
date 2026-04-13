@@ -28,4 +28,16 @@ public class Lista {
 */
     }
 
+    // Metodo para Exibir - Passa um por um, busca Linear
+    public void exibir() {
+        No andaLista = inicio; // Variavel vai servir para andar pela lista
+        while (andaLista != null ){ // Basicamente, enquanto ainda existir um nó, continue
+            System.out.println(andaLista.getProduto()); // Vai pegar a informação do Produto dentro do nó que estiver e imprimir
+            andaLista = andaLista.getProx(); // Agora o andaLista não vai mais apontar pro nó atual, mas sim para o proximo.
+            // E fim do laço, ele avança até o proximo ser vazio, que quer dizer que não existem mais nós, e para.
+        }
+
+    }
+
+    
 }
