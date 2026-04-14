@@ -24,5 +24,32 @@ public class Main {
             System.out.println("Produto não encontrado.");
         }
 
+        // Atualização
+        System.out.println("\nAtualizando o preço: ");
+        boolean atualizado = lista.atualizar(2, 30.00);
+
+        if(atualizado){
+            System.out.println("O preço do produto foi atualizado com sucesso");
+        } else {
+            System.out.println("O produto não foi encontrado");
+        }
+
+        // Exibindo lista apos a atualização
+        System.out.println("\nLista com produtos atualizados:");
+        lista.exibir();
+
+        // Tirando algum produto da Lista
+        System.out.println("\nRemovendo o ID 2");
+        boolean removido = lista.remover(2);
+
+        if(removido){
+            System.out.println("O produto com o ID selecionado foi removido com sucesso");
+        } else{
+            System.out.println("O produto com o ID selecionado não foi encontrado");
+        }
+
+        System.out.println("\nLista após remoção");
+        lista.exibir();
+
     }
 }
