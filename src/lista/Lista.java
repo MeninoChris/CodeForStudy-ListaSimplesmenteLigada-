@@ -93,4 +93,23 @@ public class Lista {
     }
 
     // Agora vamos fazer o metodo para apagar a lista
+    public void apagarLista(){
+        inicio = null;
+        aux = null;
+        atual = null;
+        // A lista existe por causa das referencias, se elas forem vazias, então a lista se apaga sozinha.
+
+    }
+
+    public void aumentoPrecoLista(double percentual){
+        No andaLista = inicio;
+        while(andaLista != null){ // Vai fazer ate a lista existir, já que nao modificamos para ser em um produto só
+            Produto prod = andaLista.getProduto(); // Dessa forma ele vai guarda o valor do produto que estiver parado o andaLista e guardar dentro do prod
+            double novoPreco = prod.getPreco() + (prod.getPreco() * percentual / 100); // Basicamente vai guardar dentro do novo preco, o preço atual
+            // que vai ser somado ao preçodele mesmo vezes o percentual que o usuario quer aumentar dividido por 100, calculo de porcentagem basica
+            prod.setPreco(novoPreco); // seta o preço do produto escolhido com o novo preço
+
+            // Caso queiramos parar em um so produto criariamos a variavel id, fariamos a verificação e depois de tudo e depois um break para parar o while
+        }
+    }
 }

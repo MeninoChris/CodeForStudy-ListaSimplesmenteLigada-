@@ -51,5 +51,27 @@ public class Main {
         System.out.println("\nLista após remoção");
         lista.exibir();
 
+        // Vamos apagar toda a lista
+        System.out.println("\nVamos apagar a lista agora, mas antes vamos ver como ela está atualmente");
+        lista.exibir();
+
+        System.out.println("\nAgora vamos apagar ela");
+        lista.apagarLista();
+
+        System.out.println("\nA lista foi apagada com sucesso");
+        lista.exibir();
+
+        // Criando lista de novo
+        lista.inserir(new Produto("Molho de Tomate", 2.00));
+        lista.inserir(new Produto("Feijão", 10.00));
+        lista.inserir(new Produto("Chocolate", 11.00));
+
+        System.out.println("\nLista antes do reajuste de preço:");
+        lista.exibir();
+
+        lista.aumentoPrecoLista(10);
+
+        System.out.println("\nLista depois do reajuste de 10%:");
+        lista.exibir();
     }
 }
